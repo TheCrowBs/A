@@ -1,0 +1,29 @@
+import com.sun.corba.se.impl.ior.FreezableList;
+
+import java.util.Scanner;
+
+public class Tanci {
+    public static void main(String[] args){
+        Scanner scanner =new Scanner(System.in);
+
+        double L = Double.parseDouble(scanner.nextLine());
+        double W = Double.parseDouble(scanner.nextLine());
+        double A = Double.parseDouble(scanner.nextLine());
+
+        int Denser = 40;
+        int DensArea = 7000;
+
+        double AreaHall = ((L*100)*(W*100));
+
+        double Wardrobe =((A*100)*(A*100));
+
+        double Steishan = (AreaHall/10);
+
+        double FreeArea = Math.floor(AreaHall-Wardrobe-Steishan);
+
+        double AllDensers=(int)(FreeArea/(Denser+DensArea));
+
+        System.out.println(Math.round(AllDensers));
+
+    }
+}
